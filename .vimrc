@@ -10,6 +10,10 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 
@@ -30,12 +34,18 @@ nnoremap <space> za
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let mapleader=","
 
-set relativenumber
 set encoding=utf-8
 " NerdTree
 let NERDTreeShowHidden=1
 nmap <F6> :NERDTreeToggle<CR>
-" syntax on
+
+let python_highlight_all=1
+syntax on
 " colorscheme torte 
 " 
+
+set number
+
+" rust 
+let g:rustfmt_autosave = 1
 
